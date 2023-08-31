@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="arqueo" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6f2954a9-e5aa-4f97-8983-1ca59f27e208">
+	<property name="ireport.zoom" value="1.5931540885517839"/>
+	<property name="ireport.x" value="287"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<queryString>
+		<![CDATA[SELECT
+     denominaciones.a1000 AS denominaciones_a1000,
+     denominaciones.a500 AS denominaciones_a500,
+     denominaciones.a200 AS denominaciones_a200,
+     denominaciones.a100 AS denominaciones_a100,
+     denominaciones.a50 AS denominaciones_a50,
+     denominaciones.a20 AS denominaciones_a20,
+     denominaciones.M20 AS denominaciones_M20,
+     denominaciones.a10 AS denominaciones_a10,
+     denominaciones.a5 AS denominaciones_a5,
+     denominaciones.a2 AS denominaciones_a2,
+     denominaciones.a1 AS denominaciones_a1,
+     denominaciones.C50 AS denominaciones_C50,
+     denominaciones.C20 AS denominaciones_C20,
+     denominaciones.C10 AS denominaciones_C10,
+     cheque.id AS cheque_id,
+     cheque.banco AS cheque_banco,
+     cheque.gastos AS cheque_gastos,
+     cheque.totalcaja AS cheque_totalcaja,
+     cheque.totalbanco AS cheque_totalbanco
+FROM
+     denominaciones denominaciones,
+     cheque cheque]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="555" splitType="Stretch">
+			<staticText>
+				<reportElement x="24" y="31" width="169" height="43" uuid="c752a85d-3748-4752-8e57-efd26c57b52d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CENTRO DE INGENIERIA Y DESARROLLO INDUSTRIAL
+CIDESI
+Arqueo Fondo Fijo Tesorería
+Importe del Fondo: $20,000.00
+Responsable del fondo: Miguel Angel Martinez Lara]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="41" width="139" height="46" uuid="73e21431-6b43-4d2a-a00a-0c4d9fd0c949"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha:
+Importe del Fondo: $20,000.00
+Hora de inicio:
+Hora de termino:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="464" y="42" width="100" height="10" uuid="bff01888-0d25-4e0a-8149-664b8175dccb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="87" y="99" width="24" height="7" uuid="6ef3cbc7-e1ab-4947-b731-36525b614c25"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="88" width="24" height="9" uuid="4a738280-6a42-4b7c-a4fa-7c6177bc880a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Billetes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="97" width="45" height="7" uuid="7b781e0a-b9f1-4374-985b-f164ece27370"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Denominación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="123" width="27" height="8" uuid="470f4432-a7c8-48bc-bb4a-b071b160834b"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="131" width="27" height="8" uuid="b8bc24dd-bb22-4bcc-87b6-48c3c1fa22ed"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="139" width="27" height="8" uuid="731c0753-3fb6-4fb7-a614-027d2d4589ac"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="147" width="27" height="8" uuid="5f4775cf-7539-4813-a095-713cc6debc26"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="155" width="27" height="8" uuid="a983eeae-1fd7-4dcc-a2a8-3738aef4a708"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="163" width="27" height="8" uuid="552dfde4-85ae-40f6-8db4-3f08ede07642"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="99" width="45" height="7" uuid="89ed2b4a-7121-4621-ae08-4955b0c382cb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="171" width="27" height="8" uuid="42258f1f-5fa1-477b-add8-338582e94e24"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="123" width="45" height="8" uuid="4eac03af-029e-49c5-ad24-fc465f961092"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[1000]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="131" width="45" height="8" uuid="d0fc1ea9-252a-48f4-a003-3ed7215c284c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[500]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="139" width="45" height="8" uuid="2f41bb7d-d825-4c8a-8ac5-afa3b6a204de"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[200]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="147" width="45" height="8" uuid="498fc79c-7d37-409c-bdb3-cf25e9f7803b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[100]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="155" width="45" height="8" uuid="a19f1d36-6ffb-40f4-8bd1-9272a69e63a4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[50]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="163" width="45" height="8" uuid="3cacf8ca-1427-4182-a2e2-2a9446ef2aa8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[20]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="123" width="21" height="8" uuid="79e2c3f0-6ff3-4fb8-ae84-67dd39a550e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="180" width="21" height="8" uuid="92a7da9f-503d-4cc9-92f7-ea3b5de1682f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="97" width="45" height="7" uuid="2b2b473a-5a7b-4022-b64e-708249d0b8ec"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="175" width="49" height="10" uuid="e0944a2d-dab7-43a3-a640-a345360cd64c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de billetes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="87" width="24" height="9" uuid="b92062e5-c9a6-4124-af1c-061cb2ce4376"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="96" width="24" height="7" uuid="2bb24ba7-7433-46fd-9cc5-2833fda51aad"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="123" width="45" height="8" uuid="4a036d73-968f-47b7-91cb-2d242d427da3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[20]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="679" y="115" width="14" height="8" uuid="e1942dc9-db90-45fd-b72e-9b99122dc01e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="139" width="45" height="8" uuid="250ad3d1-7549-42b2-872e-4c46646e01f6"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[5]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="171" width="27" height="8" uuid="25d980a3-9d07-40f2-970e-1d857c675e05"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="612" y="98" width="45" height="7" uuid="e76f6069-5e8e-4cbd-8273-255dfafb932b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="131" width="45" height="8" uuid="74ec27af-7e9d-4509-bf83-dc59289804d9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[10]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="432" y="193" width="49" height="10" uuid="b191bdd2-a2d4-4057-a0c6-258cc4f0b12e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de monedas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="155" width="27" height="8" uuid="68edb22f-61c2-4d98-b3e0-4dc4ae8f4859"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="718" y="96" width="45" height="7" uuid="fdac8558-6377-4345-9e83-b56594d1e004"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="147" width="27" height="8" uuid="3827d1aa-3aaf-4b27-b48d-56245994485b"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="679" y="194" width="14" height="8" uuid="6b2f5984-b965-4a29-8534-f295609f61bc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="163" width="45" height="8" uuid="af900799-2fdb-45ad-bbf6-50703c7f9d8b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[0.50]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="131" width="27" height="8" uuid="6b21d771-224b-4232-b322-fd0dca8bc1c9"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="155" width="45" height="8" uuid="7ee4c628-c9a2-4c03-9f8e-b96a504d15f5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[1]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="123" width="27" height="8" uuid="b3dd8944-60de-4aab-8aa0-07165df6373a"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="147" width="45" height="8" uuid="db001d0a-fd3e-4ecf-9b48-8caa5ad13786"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[2]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="179" width="27" height="8" uuid="3ac3d2e4-1b32-4e70-bb63-2fd34f7b886d"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="171" width="45" height="8" uuid="93ba88c4-6c47-41e7-afe1-79b1c28a10f5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[0.20]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="459" y="187" width="27" height="7" uuid="21a2951c-e6f5-4e31-9cb3-2e5e79c079f0"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="179" width="45" height="8" uuid="df5c3f61-7f16-4f35-a967-21aa9f0f5c75"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[0.10]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="193" y="225" width="75" height="13" uuid="63410966-f662-4c40-b4eb-6a238bdda6f4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobantes Definitivos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="253" width="102" height="8" uuid="3b96bb05-34c3-4206-85b3-d3f9a246db11"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[VALES PROVISIONALES DE CAJA CHICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="272" width="132" height="8" uuid="0f642f6b-2719-4245-962a-dfa157baaaa1"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTES DE GASTOS Y FACTURAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="267" width="19" height="8" uuid="cab41b14-4474-4434-b529-b48f223e5a3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="295" width="64" height="10" uuid="786ef1d4-2f3e-4557-8a4b-77554e0e763e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total comprobantes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="295" width="19" height="8" uuid="dbd5681f-ade1-4eb5-8dcd-6618914159df"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="324" width="30" height="10" uuid="2e28cef1-7ef1-43d7-85fa-f10639fb19b1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESUMEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="334" width="30" height="10" uuid="0f181023-a1c4-43ac-ac04-2953ae260309"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Concepto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="347" width="64" height="8" uuid="29ca95d7-4db7-4890-ab95-65ae3cfaaee1"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total en Banco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="358" width="64" height="8" uuid="e052a203-bbaf-45b7-9262-5fbee9aa7d5c"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total efectivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="371" width="64" height="8" uuid="03c16084-4deb-40be-99e4-b2b3de3a81f7"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total de documentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="384" width="64" height="8" uuid="027e5363-1a5c-46b7-be15-0d29e48ae509"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total según Arqueo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="401" width="64" height="8" uuid="8d2a25e9-22e1-4030-9eab-cad832143a84"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Importe del fondo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="418" width="64" height="8" uuid="fde43b3d-1c1e-462f-8b20-28d459f9a8a1"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sobrante (faltante)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="334" width="66" height="10" uuid="8273817d-f3c7-4060-8f39-23cfc1f4709d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="453" width="347" height="8" uuid="90996197-e9e6-49c6-821d-23cad2cc605d"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hago constar que el fondo fijo es propiedad de CIDESI y esta bajo mi custodia, fue arqueado y devuelto a mi entera satisfacción.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="543" width="118" height="12" uuid="a87f0ecc-bf4d-41d6-8834-a298c365968e"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="398" y="543" width="83" height="12" uuid="d2cb327b-6469-434d-929e-96895d5a0b14"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="26" y="453" width="60" height="10" uuid="94257d0c-9b02-4fd9-9f4e-1c886e7143f7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBSERVACIONES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="473" width="172" height="38" uuid="af040fca-c400-4029-810f-f289d635bf1e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CIDESI
+
+
+M. en F Ivone Berenice Mata Ramos
+Directora de Gestión Financiera y Seguridad en el Trabajo
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="472" width="161" height="38" uuid="f488f1cf-928a-4d5b-8515-42ab4e06adff"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Elaboró
+CIDES 
+
+
+Arturo Javier Garcia Muñoz
+Gestor
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="472" width="161" height="38" uuid="fca6132b-2599-4939-8e50-0a3e90508c46"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Revisó
+CIDESI
+
+
+Ing. Miguel Ángel Martinez Lara
+Subdirector Administrativo
+]]></text>
+			</staticText>
+			<line>
+				<reportElement x="25" y="97" width="375" height="1" uuid="24dc18b5-8e33-4f28-bdc0-b8947d895cf9"/>
+			</line>
+			<line>
+				<reportElement x="442" y="95" width="321" height="1" uuid="00bfd1bd-2fd6-4ed1-8fc6-3561329ebb24"/>
+			</line>
+			<staticText>
+				<reportElement x="523" y="99" width="45" height="7" uuid="aa975026-3b51-4fec-b8f3-13bfc7450d7c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Denominación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="139" width="27" height="8" uuid="1cc33cae-6d8a-4c0e-a059-910820ab6ed6"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="163" width="27" height="8" uuid="130055f3-c2de-4f1a-8485-86d6fa12df1d"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nacional]]></text>
+			</staticText>
+			<line>
+				<reportElement x="24" y="14" width="739" height="1" uuid="e81bcb94-5988-4019-9c0c-bb1388dab55b"/>
+			</line>
+			<line>
+				<reportElement x="763" y="14" width="1" height="517" uuid="248e7fb5-a2d5-4692-bf28-a9a3fd54be96"/>
+			</line>
+			<line>
+				<reportElement x="24" y="530" width="740" height="1" uuid="65763eb0-720a-484e-bae7-826103b524d2"/>
+			</line>
+			<line>
+				<reportElement x="24" y="15" width="1" height="515" uuid="68a13992-8bcf-42e3-ae24-4e1c0177d9d0"/>
+			</line>
+			<line>
+				<reportElement x="25" y="106" width="149" height="1" uuid="01d113df-b043-423c-8930-2dd72ef8cf16"/>
+			</line>
+			<line>
+				<reportElement x="258" y="107" width="66" height="1" uuid="b6cfce7f-3e3e-4004-9ef5-bea9f1795494"/>
+			</line>
+			<line>
+				<reportElement x="355" y="107" width="45" height="1" uuid="806155db-5649-4e92-9919-309aff9a7783"/>
+			</line>
+			<line>
+				<reportElement x="442" y="109" width="44" height="1" uuid="16546d18-926f-426a-9fa9-626e1fdf89fa"/>
+			</line>
+			<line>
+				<reportElement x="512" y="108" width="69" height="1" uuid="515988c7-0af8-4264-b8c5-ea53c499c1bf"/>
+			</line>
+			<line>
+				<reportElement x="610" y="108" width="48" height="1" uuid="ba4688fe-2a1f-433e-acb3-423bf146d0b8"/>
+			</line>
+			<line>
+				<reportElement x="693" y="108" width="70" height="1" uuid="7087f7f1-621b-41f9-a272-8c76800a459f"/>
+			</line>
+			<line>
+				<reportElement x="257" y="179" width="72" height="1" uuid="bf586907-8361-45bf-92a4-0bd7a1f07379"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="257" y="188" width="72" height="1" uuid="19ffa116-ca70-4ce6-8db2-1cc3c4c88bd8"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="257" y="190" width="72" height="1" uuid="bb9b7e6e-0110-42fa-8185-4dcf73f2d2b5"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="355" y="179" width="45" height="1" uuid="0997ef35-56e1-4f7a-a316-5fb684922963"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="355" y="187" width="45" height="1" uuid="58a03fb3-c395-4d75-9e40-8f84614fa526"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="355" y="189" width="45" height="1" uuid="495022f9-b1e2-4c95-9ef0-17c1dc4304db"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="612" y="193" width="45" height="1" uuid="e97c525b-1d7e-43ab-a1c6-18f67aedfebc"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="612" y="201" width="45" height="1" uuid="b1e7404a-b8a5-4a64-b5a6-a99aec42aa72"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="612" y="203" width="45" height="1" uuid="aa44eaee-2266-4092-97b1-3b1539f0bb89"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="693" y="193" width="70" height="1" uuid="e3a28071-29b3-4c23-a459-695e0dc171bb"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="693" y="201" width="70" height="1" uuid="80815946-7e56-4fae-b50f-026788e35c35"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="693" y="203" width="70" height="1" uuid="bcde79ea-8742-4202-a02e-fa859b29e457"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="25" y="260" width="363" height="1" uuid="bc625e81-ad94-4fbf-aec4-3dcca013a69f"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="24" y="280" width="364" height="1" uuid="9c1a412d-0064-4aa7-90d9-ea2bace36481"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="442" y="261" width="54" height="1" uuid="bdf3e9c1-e531-4357-9520-b639295ea5bb"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="442" y="279" width="54" height="1" uuid="7efc6a3d-eb1c-485d-8a57-cc55c0027edb"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="442" y="302" width="54" height="1" uuid="f38f3c04-0123-492a-bd75-4aeb3c8463c5"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="442" y="304" width="54" height="1" uuid="3d784f06-0368-4526-bd3f-b177e79aa28a"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="510" y="261" width="54" height="1" uuid="d5bc4735-6db0-4cc6-b7ed-46d92ee2b5a4"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="510" y="278" width="54" height="1" uuid="d79dbe96-adc4-4adb-9562-3b9926f3ecaf"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="593" y="261" width="170" height="1" uuid="6408709d-5886-4f87-accb-8df56ca558aa"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="594" y="278" width="170" height="1" uuid="ebb7ab9e-e411-43ab-b20b-d423d08fe085"/>
+				<graphicElement>
+					<pen lineWidth="0.75"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="437" y="401" width="64" height="8" uuid="fe89b05e-0bed-4069-9b03-c3200b653e06"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[20,000.00]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+</jasperReport>
